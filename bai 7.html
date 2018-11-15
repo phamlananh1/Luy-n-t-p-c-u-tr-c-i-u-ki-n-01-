@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a;
+    var b;
+    var c;
+    var a = prompt("tong phut goi noi mang: ");
+    var b = prompt("tong phut goi ngoai mang: ");
+    if (a <= 200) {
+        if (b <= 200){
+            var  c = (a * 100) + (b * 200);
+        } else if (b <= 400) {
+            var  c = (a * 100) + (b * 100);
+        } else {
+            var  c = (a * 100) + (b * 50);
+        }
+    } else if (a <= 400) {
+        if (b <= 200){
+            var  c = (a * 70) + (b * 200);
+        } else if (b <= 400) {
+            var  c = (a * 70) + (b * 100);
+        } else {
+            var  c = (a * 70) + (b * 50);
+        }
+    } else if(a > 400) {
+        if (b <= 200){
+            var  c = (a * 40) + (b * 200);
+        } else if (b <= 400) {
+            var  c = (a * 40) + (b * 100);
+        } else {
+            var  c = (a * 40) + (b * 50);
+        }
+    } else {
+        document.write("gia tri khong dung ");
+    }
+    document.write("tien cuoc dien thoai la: " + c + " VND");
+</script>
+</body>
+</html>

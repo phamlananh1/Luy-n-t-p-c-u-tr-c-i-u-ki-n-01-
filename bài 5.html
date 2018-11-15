@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Điểm kiểm tra
+    <input type="text" id="kiemtra">
+    Điểm thi giữa kỳ
+    <input type="text" id="thi_1">
+    Điểm thi cuối kỳ
+    <input type="text" id="thi_2">
+    <button type="button" id="tongdiem" name="tongdiem" onclick="pheptinh()">click</button>
+    <br/>
+    <div id="div">sếp loại học sinh:  </div>
+</form>
+<script>
+    var a;
+    var b;
+    var c;
+    var d;
+function pheptinh() {
+    a = parseInt(document.getElementById("kiemtra").value);
+    b = parseInt(document.getElementById("thi_1").value);
+    c = parseInt(document.getElementById("thi_2").value);
+    d = a + b + c;
+    if (d <= 15) {
+        document.getElementById("div").innerHTML ="sếp loại học sinh: yếu";
+    } else if (d <= 20){
+        document.getElementById("div").innerHTML ="sếp loại học sinh: trung binh";
+    } else if (d <= 25) {
+        document.getElementById("div").innerHTML ="sếp loại học sinh: kha";
+    } else {
+        document.getElementById("div").innerHTML ="sếp loại học sinh: goi";
+    }
+}
+</script>
+</body>
+</html>
